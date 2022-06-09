@@ -90,7 +90,7 @@ if (Q6 == 11) {
 
     }
 }
-    // Question 7
+    Question 7
     const countries = ["JAPAN", "NETHERLANDS", "UNITED KINGDOM", "IRELAND", "BELGIUM", "SPAIN", "FRANCE", "ITALY", "CZECH REPUBLIC", "GREECE"];
     let countryLen = countries.length;
     let Q7 = prompt("What is one of my top 10 countries to visit?");
@@ -98,26 +98,30 @@ if (Q6 == 11) {
     let found = false;
     let attempts = 5;
 
-    while (attempts > 0 && !found) {
+   function travel() {
+     
         for (let i = 0; i < countryLen; i++) {//loop comparing question entry to all the answers in array
             let compare = countries[i].toString();
-            // console.log(compare);
-            // console.log(Q7);
-            if (Q7 == compare) {
-                alert("You guessed one! Nice Job!");
-                found = true;//escape from loop if correct answer is guessed.
-                tally = tally + 1;
-                break;
-            }
+            return compare;
+            console.log(compare);
+            console.log(Q7);
+            // if (Q7 == compare) {
+            //     alert("You guessed one! Nice Job!");
+            //     found = true;//escape from loop if correct answer is guessed.
+            //     tally = tally + 1;
+            //     break;
+            // }
         }
-        if (found == false) {
-            Q7 = prompt(`Wrong answer. Please try again. ${attempts} attempts remain.`).toUpperCase();
-            attempts = attempts - 1//loop to create attempt limit
-        }
+    } 
+   
+    if (Q7 === travel()) {
+        alert("Right!")
+    } else {
+        alert("Nope")
     }
-    if (attempts == 0) {
-        alert(`All out of guesses! Better luck next time ${userName}.`);
-    }
+    
+   
+
 
 
 
