@@ -5,8 +5,14 @@ let userName = prompt("What is your name?");
 alert(`Welcome to my site ${userName}.`);
 alert("I'm going to ask you a few questions that may or may not tell you about me. Give it your best guess!");
 
+function checkAnswer(questionNumber){
+    while (questionNumber ==! 'Y' && questionNumber ==! 'N'){
+        questionNumber = prompt("Please enter y or n").toUpperCase();
+    }
+}
 //Question 1
 let Q1 = prompt("I am 29 years old and I'm from Canada. Y or N").toUpperCase();//first question
+checkAnswer(Q1);
 //User outcome
 if (Q1 == "Y") {
     alert("Incorrect!")
