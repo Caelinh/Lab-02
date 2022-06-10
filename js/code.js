@@ -5,16 +5,17 @@ let userName = prompt("What is your name?");
 alert(`Welcome to my site ${userName}.`);
 alert("I'm going to ask you a few questions that may or may not tell you about me. Give it your best guess!");
 
-function checkAnswer(questionNumber){
-    while (questionNumber ==! 'Y' && questionNumber ==! 'N'){
-        questionNumber = prompt("Please enter y or n").toUpperCase();
+function checkAnswer(){
+    while (answer ==! 'Y' && answer ==! 'N'){
+        answer = prompt("Please enter y or n").toUpperCase();
     }
 }
 //Question 1
-let Q1 = prompt("I am 29 years old and I'm from Canada. Y or N").toUpperCase();//first question
-checkAnswer(Q1);
+let answer = prompt("I am 29 years old and I'm from Canada. Y or N").toUpperCase();//first question
+checkAnswer();
 //User outcome
-if (Q1 == "Y") {
+console.log(answer);
+if (answer == "Y") {
     alert("Incorrect!")
 } else {
     alert("You're correct!");
@@ -24,9 +25,10 @@ if (Q1 == "Y") {
 
 
 //Question 2
-let Q2 = prompt("I attended Texas Tech University for a degree in computer science. Y or N").toUpperCase();
+answer = prompt("I attended Texas Tech University for a degree in computer science. Y or N").toUpperCase();
+checkAnswer();
 //User outcome
-if (Q2 == "N") {
+if (answer == "N") {
     alert("Incorrect!")
 } else {
     alert("You're correct!");
@@ -36,9 +38,10 @@ if (Q2 == "N") {
 //console.log(`College: ${Q2}`);//logging to console
 
 //Question 3
-let Q3 = prompt("I have a certification in music production. Y or N").toUpperCase();
+answer = prompt("I have a certification in music production. Y or N").toUpperCase();
+checkAnswer()
 //User outcome
-if (Q3 == "N") {
+if (answer == "N") {
     alert("Incorrect!")
 } else {
     alert("You're correct!");
@@ -47,9 +50,10 @@ if (Q3 == "N") {
 //console.log(`Music Production: ${Q3}`);//logging to console
 
 //Question 4
-let Q4 = prompt("I ride horses on the weekends. Y or N").toUpperCase();
+answer = prompt("I ride horses on the weekends. Y or N").toUpperCase();
+checkAnswer()
 //User outcome
-if (Q4 == "Y") {
+if (answer == "Y") {
     alert("Incorrect!")
 } else {
     alert("You're correct!");
@@ -58,13 +62,14 @@ if (Q4 == "Y") {
 //console.log(`Cowboy: ${Q4}`);//logging to console
 
 //Question 5
-let Q5 = prompt("I've visited over 15 countries. Y or N").toUpperCase();
+answer = prompt("I've visited over 15 countries. Y or N").toUpperCase();
+checkAnswer()
 //checking correct input
 // if (Q5 !== "Y" || Q5 !== "N") {
 //     Q5 = prompt("Please input either a Y or N").toUpperCase();
 // }
 //User outcome
-if (Q5 == "N") {
+if (answer == "N") {
     alert("Incorrect!")
 } else {
     alert("You're correct!");
